@@ -29,6 +29,8 @@ variable "test_subnets" {
 variable "ext_router" {
   type = object({
     name                = string
-    external_network_id = string
+    enable_snat         = string
+    external_network_name = string
+    internal_subnet_name = optional(string)
   })
 }

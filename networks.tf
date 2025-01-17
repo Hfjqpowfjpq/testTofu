@@ -33,11 +33,11 @@ resource "openstack_networking_subnet_v2" "subnets" {
 
 resource "openstack_networking_router_v2" "external_router" {
   name                = var.ext_router.name
-  enable_snat         = var.ext_roter.enable_snat
+  enable_snat         = var.ext_router.enable_snat
   external_network_id = openstack_networking_network_v2.networks[var.ext_router.external_network_name].id
 }
 
 resource "openstack_networking_router_interface_v2" "router_internal_interface" {
-  router_id = openstack_networking_router_v2.ext_router.id
-  subnet_id = openstack_networking_subnet_v2.subnets[var.ext_roter.internal_subnet_name].id
+  router_id = openstack_networking_router_v2.external_router.id
+  subnet_id = openstack_networking_subnet_v2.subnets[var.ext_router.internal_subnet_name].id
 }

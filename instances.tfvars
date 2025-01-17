@@ -1,15 +1,15 @@
 test_flavors = [ 
   {
-    name  = test.tiny
-    ram   = 512
-    vcpus = 1
-    disk  = 1   
+    name  = "test.tiny"
+    ram   = "512"
+    vcpus = "1"
+    disk  = "1"   
   },
   {
-    name  = test.medium
-    ram   = 2
-    vcpus = 4
-    disk  = 40   
+    name  = "test.medium"
+    ram   = "2"
+    vcpus = "4"
+    disk  = "40"   
   } 
 ]
 
@@ -38,7 +38,7 @@ test_instances = [
     key_pair              = "test-keypair"
     security_groups_names = ["default","ingress_rules"]
 
-    network {
+    network = {
       name = "external_net"
     }
   },
@@ -49,7 +49,7 @@ test_instances = [
     key_pair              = "test-keypair"
     security_groups_names = ["default","ingress_rules"]
 
-    network {
+    network = {
       name = "internal_net"
     }
   },

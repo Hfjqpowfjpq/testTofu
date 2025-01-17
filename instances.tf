@@ -30,5 +30,7 @@ resource "openstack_compute_instance_v2" "instances" {
   flavor_id       = openstack_compute_flavor_v2.flavors[each.value.flavor_name].id
   key_pair        = each.value.keypair
   security_groups = each.value.visibility
-  network         = each.value.network
+  network = {
+    name = each.value.network.name
+  }
 }
