@@ -45,6 +45,6 @@ test_subnets = [
 ext_router = {
   name                  = "ext_router"
   enable_snat           = "true"
-  external_network_name = "external_net"
-  internal_subnet_name  = "internal_subnet"
+  external_network_name = "external-net"
+  internal_subnet_name  = "internal-subnet"
 }

@@ -12,8 +12,8 @@ variable "connection" {
     user_name           = "admin"
     tenant_name         = "admin"
     project_domain_name = "admin"
-    password            = "kHoeDEr87oLWsvRHVXdPC5XA4uavju0aFz1gCt2Q"
-    auth_url            = "http://192.168.33.2:5000"
+    password            = "04sQWfhNTJuTkqtCU8NOKINsKQE2HpvO4jZt1AnZ"
+    auth_url            = "http://10.0.1.132:5000"
     region              = "RegionOne"
   }
 }
