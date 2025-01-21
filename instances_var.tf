@@ -6,7 +6,7 @@ variable "test_key" {
 
   default = {
     name = "test-keypair"
-    key  = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKLnRMWBYI/qWPOLF/x4C3gbhDVV3E89o3hqDuBQpc4h"
+    key  = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEAF/euleytTw12u69L0Pfjy9CcEGSFceERPlWmQKOS0"
   }
 }
 

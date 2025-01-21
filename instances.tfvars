@@ -36,10 +36,10 @@ test_instances = [
     image_name            = "Ubuntu-Jammy"
     flavor_name           = "test.medium"
     key_pair              = "test-keypair"
-    security_groups_names = ["default","ingress_rules"]
+    security_groups_names = ["default","ingress_rule"]
 
     network = {
-      name = "external_net"
+      name = "external-net"
     }
   },
   {
@@ -47,10 +47,10 @@ test_instances = [
     image_name            = "Rocky-9"
     flavor_name           = "test.medium"
     key_pair              = "test-keypair"
-    security_groups_names = ["default","ingress_rules"]
+    security_groups_names = ["default","ingress_rule"]
 
     network = {
-      name = "internal_net"
+      name = "internal-net"
     }
   },
 ] 

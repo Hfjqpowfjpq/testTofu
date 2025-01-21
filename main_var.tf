@@ -11,9 +11,9 @@ variable "connection" {
   default = {
     user_name           = "admin"
     tenant_name         = "admin"
-    project_domain_name = "admin"
+    project_domain_name = "Default"
     password            = "04sQWfhNTJuTkqtCU8NOKINsKQE2HpvO4jZt1AnZ"
-    auth_url            = "http://10.0.1.132:5000"
+    auth_url            = "http://10.0.1.132:5000/v3"
     region              = "RegionOne"
   }
 }

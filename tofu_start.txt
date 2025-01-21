@@ -1,3 +1,3 @@
 tofu init
 tofu plan -var-file instances.tfvars -var-file networks.tfvars -var-file secgroups.tfvars
-tofu apply
+tofu apply -var-file instances.tfvars -var-file networks.tfvars -var-file secgroups.tfvars
