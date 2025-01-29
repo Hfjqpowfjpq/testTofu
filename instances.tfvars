@@ -15,7 +15,7 @@ test_instances = [
     ]
 
     image_block_device = {
-      uuid_name             = "Rocky-8-GenericCloud-LVM.x86_64"
+      uuid_name             = "Ubuntu 22.04 server"
       source_type           = "b_boot_vm"
       volume_size           = "32"
       boot_index            = "0"
@@ -42,7 +42,7 @@ test_instances = [
     ]
 
     image_block_device = {
-      uuid_name             = "Rocky-8-GenericCloud-LVM.x86_64"
+      uuid_name             = "Ubuntu 22.04 server"
       source_type           = "image"
       volume_size           = "32"
       boot_index            = "0"
@@ -69,7 +69,7 @@ test_instances = [
     ]
 
     image_block_device = {
-      uuid_name             = "Rocky-8-GenericCloud-LVM.x86_64"
+      uuid_name             = "Ubuntu 22.04 server"
       source_type           = "image"
       volume_size           = "32"
       boot_index            = "0"
@@ -96,7 +96,7 @@ test_instances = [
     ]
 
     image_block_device = {
-      uuid_name             = "Rocky-8-GenericCloud-LVM.x86_64"
+      uuid_name             = "Ubuntu 22.04 server"
       source_type           = "image"
       volume_size           = "32"
       boot_index            = "0"

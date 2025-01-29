@@ -1,18 +1,3 @@
-data "openstack_images_image_v2" "image" {
-  for_each = { for entry in var.test_instances : entry.image_block_device.uuid_name => entry.image_block_device.uuid_name }
-  name     = each.key
-}
-
-data "openstack_compute_flavor_v2" "flavor" {
-  for_each = { for entry in var.test_instances : entry.flavor_name => entry.flavor_name }
-  name     = each.key
-}
-
-data "openstack_compute_keypair_v2" "keypair" {
-  for_each = { for entry in var.test_instances : entry.key_pair => entry.key_pair }
-  name     = each.key
-}
-
 resource "openstack_compute_instance_v2" "instances" {
   for_each = { for entry in var.test_instances : entry.name => entry }
   name            = each.value.name
