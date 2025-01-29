@@ -1,3 +1,15 @@
+data "openstack_compute_flavor_v2" "flavor" {
+  for_each = toset([for entry in var.test_instances : entry.flavor_name])
+  name = each.value
+}
+
+
+data "openstack_images_image_v2" "image" {
+  for_each = toset([for entry in var.test_instances : entry.image_block_device.uuid_name])
+  name = each.value
+}
+
+
 resource "openstack_compute_instance_v2" "instances" {
   for_each = { for entry in var.test_instances : entry.name => entry }
   name            = each.value.name

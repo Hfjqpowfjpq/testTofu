@@ -1,7 +1,7 @@
 test_instances = [
   {
     name                  = "controller01"
-    flavor_name           = "m4.small"
+    flavor_name           = "b_boot_vm"
     key_pair              = "testkey"
     security_groups_names = ["default"]
 
@@ -16,7 +16,7 @@ test_instances = [
 
     image_block_device = {
       uuid_name             = "Ubuntu 22.04 server"
-      source_type           = "b_boot_vm"
+      source_type           = "image"
       volume_size           = "32"
       boot_index            = "0"
       destination_type      = "volume"
