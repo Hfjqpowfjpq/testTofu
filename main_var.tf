@@ -2,18 +2,11 @@ variable "connection" {
   type = object({
     user_name           = string
     tenant_name         = string
+    tenant_id           = string
     project_domain_name = string
-    password            = string
+    password            = optional(string)
     auth_url            = string
     region              = string
+    ca_cert_path        = string
   })
-
-  default = {
-    user_name           = "admin"
-    tenant_name         = "admin"
-    project_domain_name = "Default"
-    password            = "04sQWfhNTJuTkqtCU8NOKINsKQE2HpvO4jZt1AnZ"
-    auth_url            = "http://10.0.1.132:5000/v3"
-    region              = "RegionOne"
-  }
 }
