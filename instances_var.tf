@@ -4,9 +4,9 @@ variable "test_instances" {
     flavor_name           = string
     key_pair              = string
     security_groups_names = list(string)
-    network = object({
+    networks = list(object({
       name = string
-    })
+    }))
     image_block_device = object({
       uuid_name             = string
       source_type           = string

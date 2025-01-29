@@ -20,8 +20,11 @@ resource "openstack_compute_instance_v2" "instances" {
   key_pair        = each.value.key_pair
   security_groups = each.value.security_groups_names
 
-  network {
-    name = each.value.network.name
+  dynamic "network" {
+    for_each = each.value.networks
+    content {
+      name = network.value.name
+    }
   }
 
   block_device {
@@ -34,13 +37,13 @@ resource "openstack_compute_instance_v2" "instances" {
   }
 
     dynamic "block_device" {
-    for_each = each.value.auxiliary_block_devices
-    content {
-      source_type           = block_device.value.source_type
-      volume_size           = block_device.value.volume_size
-      boot_index            = block_device.value.boot_index
-      destination_type      = block_device.value.destination_type
-      delete_on_termination = block_device.value.delete_on_termination
-    }
+      for_each = each.value.auxiliary_block_devices
+      content {
+        source_type           = block_device.value.source_type
+        volume_size           = block_device.value.volume_size
+        boot_index            = block_device.value.boot_index
+        destination_type      = block_device.value.destination_type
+        delete_on_termination = block_device.value.delete_on_termination
+      }
   }
 }
