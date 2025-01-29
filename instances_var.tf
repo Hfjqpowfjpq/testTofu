@@ -6,6 +6,7 @@ variable "test_instances" {
     security_groups_names = list(string)
     networks = list(object({
       name = string
+      fixed_ip_v4 = string
     }))
     image_block_device = object({
       uuid_name             = string

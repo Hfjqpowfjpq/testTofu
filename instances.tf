@@ -21,6 +21,7 @@ resource "openstack_compute_instance_v2" "instances" {
     for_each = each.value.networks
     content {
       name = network.value.name
+      fixed_ip_v4 = network.value.fixed_ip_v4
     }
   }
 
